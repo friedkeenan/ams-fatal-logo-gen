@@ -22,7 +22,7 @@ logo_array = ["0x" + rgb_888_to_565(cont[x:x+3]).hex().upper() for x in range(0,
 if len(sys.argv) >= 3:
     header_template = sys.argv[2]
 else:
-    header_template = "ams_logo.hpp"
+    header_template = "fatal_ams_logo.inc"
 
 logo_name = os.path.basename(os.path.splitext(im.filename)[0])
 header_name, header_ext = os.path.splitext(header_template)

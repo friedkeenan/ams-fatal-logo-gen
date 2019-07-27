@@ -14,10 +14,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
  
-#pragma once
-#define AMS_LOGO_WIDTH {0}
-#define AMS_LOGO_HEIGHT {1}
+constexpr size_t AtmosphereLogoWidth = {0};
+constexpr size_t AtmosphereLogoHeight = {1};
 
-static constexpr u16 AMS_LOGO_BIN[] = {2};
+static constexpr u16 AtmosphereLogoData[] = {2};
 
-static_assert(sizeof(AMS_LOGO_BIN) == AMS_LOGO_WIDTH * AMS_LOGO_HEIGHT * sizeof(*AMS_LOGO_BIN), "Logo definition!");
+static_assert(util::size(AtmosphereLogoData) == AtmosphereLogoWidth * AtmosphereLogoHeight, "Logo definition!");
